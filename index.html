@@ -23,6 +23,11 @@
 @media(max-width:760px){.quiz-grid{display:block}.comparison-drape{height:238px}.photo-controls{padding:9px 11px}}
 @media(max-width:540px){.photo-setup{padding:19px}.photo-setup h2{font-size:15px}.photo-setup>p{font-size:11px}.photo-controls{align-items:flex-start;gap:8px}.photo-controls>span{max-width:150px;align-self:center;line-height:1.7}.observation-guide{padding:12px 13px}.observation-guide>div{grid-template-columns:35px 1fr;gap:8px}.observation-guide p{font-size:10px}.comparison-drape{height:225px}.color-block.comparison-drape .drape-photo{left:20%;width:60%}.comparison-outcomes{grid-template-columns:1fr}.comparison-outcomes .uncertain{font-size:11px;min-height:45px}.slider-drape.color-block{height:230px}.slider-drape .drape-photo{left:15%;width:70%}.photo-controls>div{flex-direction:row}.photo-controls .photo-button{min-height:38px}.beginner-tag{font-size:9px;margin-bottom:14px}.photo-limit{font-size:9px!important}}
 
+/* Fit the complete portrait at its intrinsic ratio on every screen; reveal the swatch through alpha. */
+.color-block .drape-photo,.color-block.comparison-drape .drape-photo,.slider-drape .drape-photo{left:50%;top:10px;width:auto;height:calc(100% - 36px);max-width:92%;transform:translateX(-50%);object-fit:contain;object-position:center bottom;border-radius:0;box-shadow:none}
+.natural-photo .drape-photo{object-fit:contain;object-position:center}.photo-controls{flex-wrap:wrap}.photo-controls>div{flex-wrap:wrap;flex-shrink:1}.photo-controls>span{flex:1;min-width:120px}.photo-controls .cutout-disclosure{flex-basis:100%;font-size:9px;color:var(--muted);line-height:1.8;border-top:1px solid #e6e8dc;padding-top:7px}.photo-preview{align-items:flex-start;gap:13px}.alpha-preview{width:125px;max-height:180px;overflow:hidden;flex-shrink:0;border:1px solid var(--line);border-radius:4px;background-color:#fff;background-image:linear-gradient(45deg,#e2e5db 25%,transparent 25%),linear-gradient(-45deg,#e2e5db 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e2e5db 75%),linear-gradient(-45deg,transparent 75%,#e2e5db 75%);background-size:16px 16px;background-position:0 0,0 8px,8px -8px,-8px 0}.alpha-preview canvas{display:block;width:100%;height:auto;max-height:180px;object-fit:contain}.photo-preview-tools{display:flex;flex-wrap:wrap;align-items:start;gap:7px}.photo-alpha-note{font-size:10px;color:var(--sage);padding:7px 3px}.photo-button[aria-busy=true]{background:#e3e7d8;color:#606e53}.photo-button[aria-busy=true]:before{content:'◌';display:inline-block;animation:spin 1s linear infinite;margin-right:5px}@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:540px){.color-block.comparison-drape .drape-photo,.slider-drape .drape-photo{left:50%;width:auto;max-width:92%;height:calc(100% - 36px)}.photo-controls>span{max-width:none;flex-basis:100%}.photo-controls>div{flex-direction:row;gap:6px}.photo-controls .photo-button{min-height:42px}.alpha-preview{width:110px}.photo-preview-tools{flex-direction:column}.photo-preview-tools .photo-button{font-size:10px}.photo-controls .cutout-disclosure{font-size:9px}}
+
 </style>
 </head>
 <body>
@@ -45,8 +50,8 @@
    <article class="season-preview"><span class="number">04 / 冬</span><h3 class="serif">Winter</h3><p>像星夜一樣，鮮明又俐落。</p><div class="mini-palette" aria-hidden="true"><i style="background:#81495a"></i><i style="background:#435a78"></i><i style="background:#577b72"></i><i style="background:#45464e"></i></div><small>Cool · Deep · Bright</small></article>
   </div></section>
  </section>
- <section id="intro-screen" hidden aria-labelledby="intro-title"><div class="inner-top"><button class="back-link" data-action="home">← 返回首頁</button><span>BEFORE WE BEGIN</span></div><div class="instructions"><p class="eyebrow">A moment, just for you</p><h1 class="serif" id="intro-title" tabindex="-1">Before you find<br><em>your colors.</em></h1><p class="intro-desc">不用先知道自己適合什麼。跟著色卡，一次觀察一個地方。</p><div class="photo-setup"><span class="beginner-tag">新手觀察模式 · 不必回想穿搭經驗</span><h2>把自己的照片放進色框，直接比較。</h2><p>選一張自然光、無濾鏡的正面近照。每個色框會顯示同一張照片，讓你專心觀察差別。</p><div class="photo-setup-actions"><button type="button" class="photo-button" data-action="upload-photo">選擇照片（選用）</button><span class="photo-local-note">僅本機顯示 · 不上傳 · 不自動分析</span></div><p class="photo-status" id="intro-photo-status" role="status">選正面近照，讓臉清楚可見。也可不放照片，改用鏡子與相近色衣物。</p><div class="photo-preview" id="intro-photo-preview"></div><p class="photo-limit">螢幕色框只提供視覺對照，不能模擬真實布料的反光。照片的光線、妝容與螢幕設定也會影響觀察。支援 JPG、PNG、WebP，最大 10 MB。</p></div><div class="instruction-grid"><article class="instruction-item"><span>01</span><h2>先準備觀察工具</h2><p>選用自己的近照；也可在自然光下，拿鏡子與相近顏色的衣物做比較。</p></article><article class="instruction-item"><span>02</span><h2>每次只看一個小地方</h2><p>跟著題目看眼下、鼻翼、嘴角，或眉眼與唇部輪廓，不用同時判斷整張臉。</p></article><article class="instruction-item"><span>03</span><h2>左右比較，不用先懂色彩</h2><p>觀察哪邊膚色更均勻、五官更清楚。滑桿題會直接改變預覽色框。</p></article><article class="instruction-item"><span>04</span><h2>差不多與不確定，都可以</h2><p>已比較但差別不大，選「差不多」；看不清楚或沒有工具，就選「不確定」。</p></article></div><p class="notice">這是趣味與自我探索測驗，不是專業個人色彩診斷。答案與照片只存在目前頁面的記憶體；照片可隨時移除，重新整理或重新測驗會全部清除。</p><div class="instruction-bottom"><button class="primary" id="begin-button">開始第一題 <span class="arrow" aria-hidden="true">→</span></button><small>20 題 · 約 5–8 分鐘 · 一次觀察一個地方</small></div></div></section>
- <section id="quiz-screen" hidden aria-labelledby="question-title"><div class="inner-top"><button class="back-link" data-action="intro">← 測驗說明</button><span>YOUR COLOR JOURNEY</span></div><div class="quiz-shell"><div class="progress-meta"><span id="question-count">QUESTION 01 / 20</span><span id="completion-text">已完成 0 / 20</span></div><div class="progress-track" id="quiz-progress" role="progressbar" aria-label="測驗完成進度" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div><div class="quiz-grid"><div class="question"><p class="question-kicker" id="question-kicker"></p><h1 id="question-title" tabindex="-1"></h1><p class="question-hint" id="question-hint"></p><div id="quiz-photo-tools"></div><div class="observation-guide" id="observation-guide" aria-label="本題觀察方法"></div><form id="answer-form" aria-labelledby="question-title" aria-describedby="question-hint observation-guide"></form><div class="question-nav"><button class="back-link" id="previous-button">← 上一題</button><button class="primary" id="next-button" disabled>下一題 <span class="arrow" aria-hidden="true">→</span></button></div></div><aside class="quiz-aside"><div class="aside-sun" aria-hidden="true">✳</div><h2>Look closer.<br>One detail at a time.</h2><p>不用知道自己適合什麼。<br>跟著題目指定的部位比較就好。<br><br>① 眼下與嘴角的暗影<br>② 膚色是否均勻<br>③ 眉眼與唇部是否清楚<br><br>照片只作視覺對照，不會被上傳或自動分析。</p><div class="aside-palette" aria-hidden="true"><i style="background:#c99b83"></i><i style="background:#d8bc97"></i><i style="background:#b6bda0"></i><i style="background:#939d82"></i><i style="background:#6d7c68"></i></div><p class="aside-caption">THERE IS NO WRONG SHADE OF YOU.</p></aside></div></div></section>
+ <section id="intro-screen" hidden aria-labelledby="intro-title"><div class="inner-top"><button class="back-link" data-action="home">← 返回首頁</button><span>BEFORE WE BEGIN</span></div><div class="instructions"><p class="eyebrow">A moment, just for you</p><h1 class="serif" id="intro-title" tabindex="-1">Before you find<br><em>your colors.</em></h1><p class="intro-desc">不用先知道自己適合什麼。跟著色卡，一次觀察一個地方。</p><div class="photo-setup"><span class="beginner-tag">新手觀察模式 · 不必回想穿搭經驗</span><h2>把自己的照片放進色框，直接比較。</h2><p>選一張自然光、無濾鏡的正面頭肩近照。載入後可選「自動去背」，讓色框直接出現在人像周圍；也支援透明 PNG。</p><div class="photo-setup-actions"><button type="button" class="photo-button" data-action="upload-photo">選擇照片（選用）</button><span class="photo-local-note">照片僅本機處理 · 不上傳</span></div><p class="photo-status" id="intro-photo-status" role="status">選正面頭肩近照，讓臉清楚可見。也可不放照片，改用鏡子與相近色衣物。</p><div class="photo-preview" id="intro-photo-preview"></div><p class="photo-limit">螢幕色框只提供視覺對照，不能模擬真實布料的反光。照片的光線、妝容與螢幕設定也會影響觀察。支援 JPG、PNG、WebP，最大 10 MB。自動去背首次需連網載入工具，照片不會上傳；去背不會校正原照光線或色偏，髮絲與耳環邊緣可能需要換照再試。</p></div><div class="instruction-grid"><article class="instruction-item"><span>01</span><h2>先準備觀察工具</h2><p>選用自己的近照；也可在自然光下，拿鏡子與相近顏色的衣物做比較。</p></article><article class="instruction-item"><span>02</span><h2>每次只看一個小地方</h2><p>跟著題目看眼下、鼻翼、嘴角，或眉眼與唇部輪廓，不用同時判斷整張臉。</p></article><article class="instruction-item"><span>03</span><h2>左右比較，不用先懂色彩</h2><p>觀察哪邊膚色更均勻、五官更清楚。滑桿題會直接改變預覽色框。</p></article><article class="instruction-item"><span>04</span><h2>差不多與不確定，都可以</h2><p>已比較但差別不大，選「差不多」；看不清楚或沒有工具，就選「不確定」。</p></article></div><p class="notice">這是趣味與自我探索測驗，不是專業個人色彩診斷。答案與照片只存在目前頁面的記憶體；照片可隨時移除，重新整理或重新測驗會全部清除。</p><div class="instruction-bottom"><button class="primary" id="begin-button">開始第一題 <span class="arrow" aria-hidden="true">→</span></button><small>20 題 · 約 5–8 分鐘 · 一次觀察一個地方</small></div></div></section>
+ <section id="quiz-screen" hidden aria-labelledby="question-title"><div class="inner-top"><button class="back-link" data-action="intro">← 測驗說明</button><span>YOUR COLOR JOURNEY</span></div><div class="quiz-shell"><div class="progress-meta"><span id="question-count">QUESTION 01 / 20</span><span id="completion-text">已完成 0 / 20</span></div><div class="progress-track" id="quiz-progress" role="progressbar" aria-label="測驗完成進度" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div><div class="quiz-grid"><div class="question"><p class="question-kicker" id="question-kicker"></p><h1 id="question-title" tabindex="-1"></h1><p class="question-hint" id="question-hint"></p><div id="quiz-photo-tools"></div><div class="observation-guide" id="observation-guide" aria-label="本題觀察方法"></div><form id="answer-form" aria-labelledby="question-title" aria-describedby="question-hint observation-guide"></form><div class="question-nav"><button class="back-link" id="previous-button">← 上一題</button><button class="primary" id="next-button" disabled>下一題 <span class="arrow" aria-hidden="true">→</span></button></div></div><aside class="quiz-aside"><div class="aside-sun" aria-hidden="true">✳</div><h2>Look closer.<br>One detail at a time.</h2><p>不用知道自己適合什麼。<br>跟著題目指定的部位比較就好。<br><br>① 眼下與嘴角的暗影<br>② 膚色是否均勻<br>③ 眉眼與唇部是否清楚<br><br>照片只作視覺對照，去背也在本機進行；不會上傳或分析膚色。</p><div class="aside-palette" aria-hidden="true"><i style="background:#c99b83"></i><i style="background:#d8bc97"></i><i style="background:#b6bda0"></i><i style="background:#939d82"></i><i style="background:#6d7c68"></i></div><p class="aside-caption">THERE IS NO WRONG SHADE OF YOU.</p></aside></div></div></section>
  <section id="loading-screen" hidden aria-labelledby="loading-title"><div class="calculating" role="status"><div class="loading-swatches" aria-hidden="true"><i style="background:#c99b83"></i><i style="background:#d8bc97"></i><i style="background:#b6bda0"></i><i style="background:#939d82"></i></div><h1 class="serif" id="loading-title">Finding your color story.</h1><p>正在整理你的色彩線索…</p></div></section>
  <section id="result-screen" hidden aria-labelledby="result-title"><div class="inner-top"><span>YOUR DISCOVERY, BEAUTIFULLY MADE</span><button class="back-link" data-action="review">← 回去修改答案</button></div><div class="results" id="results-content"></div></section>
 </main>
@@ -90,7 +95,7 @@ const SEASONS={
 // with True (balanced) added in the 16 system. These are exploration labels, not a universal standard.
 const SUBTYPES={Spring:[['Warm',0,1],['Light',1,1],['Bright',2,1]],Summer:[['Cool',0,-1],['Light',1,1],['Soft',2,-1]],Autumn:[['Warm',0,1],['Deep',1,-1],['Soft',2,-1]],Winter:[['Cool',0,-1],['Deep',1,-1],['Bright',2,1]]};
 const TYPE_ZH={Warm:'暖',Cool:'冷',Light:'淺',Deep:'深',Bright:'亮',Soft:'柔',True:'正'};
-let photoUrl=null,photoLoadId=0;
+let photoUrl=null,photoLoadId=0,photoOriginalUrl=null,photoCutoutUrl=null,photoOriginalCanvas=null,photoCutoutCanvas=null,photoOriginalTransparent=false,photoBusy=false,photoProcessingMessage='',portraitSegmenterPromise=null;
 let answers=Array(QUESTIONS.length).fill(null),current=0,result=null,activeScreen='home',calculationTimer=null,toastTimer=null,downloadUrl=null;
 const $=id=>document.getElementById(id);
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
@@ -125,7 +130,6 @@ function showHome(){showScreen('home');}
 function startQuiz(){current=0;renderQuestion();showScreen('quiz');}
 function updateProgress(){const completed=answers.filter(a=>a!==null).length;$('completion-text').textContent='已完成 '+completed+' / 20';$('progress-fill').style.width=completed/20*100+'%';$('quiz-progress').setAttribute('aria-valuenow',completed);$('next-button').disabled=answers[current]===null;}
 function comparisonPhoto(gray=false){return photoUrl?'<img class="drape-photo'+(gray?' grayscale':'')+'" src="'+photoUrl+'" alt="同一張照片的本機比色預覽">':'<div class="empty-face" aria-hidden="true"><span class="face-outline"></span><small>可放入你的照片</small></div>';}
-function photoControls(){return '<div class="photo-controls"><span>'+(photoUrl?'✓ 照片僅在本機顯示':'不用想像，試著放入自己的照片')+'</span><div><button type="button" class="photo-button" data-action="upload-photo">'+(photoUrl?'更換照片':'選擇照片')+'</button>'+(photoUrl?'<button type="button" class="photo-button" data-action="remove-photo">移除</button>':'')+'</div></div>';}
 function renderQuestion(){
  const q=QUESTIONS[current],a=answers[current];$('question-count').textContent='QUESTION '+String(current+1).padStart(2,'0')+' / 20';$('question-kicker').textContent=q.axis+(q.type==='scenario'?' · 配色比對':'');$('question-title').textContent=q.title;$('question-hint').textContent=q.hint;$('previous-button').textContent=current===0?'← 測驗說明':'← 上一題';$('next-button').innerHTML=(current===19?'查看我的結果':'下一題')+' <span class="arrow" aria-hidden="true">→</span>';
  $('observation-guide').innerHTML='<div><b>現在做</b><p>'+q.do+'</p></div><div><b>看哪裡</b><p>'+q.look+'</p></div>';
@@ -148,25 +152,92 @@ function renderQuestion(){
 }
 function selectAnswer(value){answers[current]=value;result=null;updateProgress();}
 function saveRange(){const n=Number($('range-input').value),q=QUESTIONS[current];selectAnswer(n);$('slider-output').textContent=n+' / 5 · '+q.labels[n-1];$('range-input').setAttribute('aria-valuetext',q.labels[n-1]);$('confirm-range').textContent='已選擇 '+n+' / 5 · 點此確認';$('slider-box').dataset.answered='true';if(q.stageColors){$('slider-drape').style.background=q.stageColors[n-1];$('slider-shade-label').textContent=q.labels[n-1];}const unknown=$('answer-form').querySelector('input[value="unknown"]');if(unknown)unknown.checked=false;}
+function photoIsCutout(){return !!photoCutoutUrl&&photoUrl===photoCutoutUrl;}
+function photoStateText(){return photoBusy?photoProcessingMessage:photoIsCutout()?'✓ 已去背 · 照片只在本機處理':photoOriginalTransparent?'✓ 已保留透明背景':'✓ 照片僅在本機顯示';}
+function photoEditButtons(){
+ if(!photoUrl)return '';
+ if(photoIsCutout())return '<button type="button" class="photo-button" data-action="restore-photo">還原原照</button>';
+ if(photoOriginalTransparent)return '<span class="photo-alpha-note">透明背景已保留</span>';
+ return '<button type="button" class="photo-button" data-action="cutout-photo" '+(photoBusy?'disabled aria-busy="true"':'')+'>'+(photoBusy?'去背處理中…':photoCutoutUrl?'使用去背圖':'自動去背')+'</button>';
+}
+function photoControls(){return '<div class="photo-controls"><span role="status">'+(photoUrl?photoStateText():'不用想像，試著放入自己的照片')+'</span><div>'+photoEditButtons()+'<button type="button" class="photo-button" data-action="upload-photo">'+(photoUrl?'更換照片':'選擇照片')+'</button>'+(photoUrl?'<button type="button" class="photo-button" data-action="remove-photo">移除</button>':'')+'</div>'+(photoUrl&&!photoOriginalTransparent?'<small class="cutout-disclosure">自動去背在本機處理；首次需連網載入工具，照片不會上傳。</small>':'')+'</div>';}
 function updatePhotoUi(){
- $('intro-photo-preview').innerHTML=photoUrl?'<img src="'+photoUrl+'" alt="本機照片預覽"><button type="button" class="photo-button" data-action="remove-photo">移除照片</button>':'';
- $('intro-photo-status').textContent=photoUrl?'照片已在本機載入，不會上傳；每張色框都使用同一張照片。':'選正面近照，讓臉清楚可見。也可不放照片，改用鏡子與相近色衣物。';
+ const activeCanvas=photoIsCutout()?photoCutoutCanvas:photoOriginalCanvas;
+ $('intro-photo-preview').innerHTML=photoUrl?'<div class="alpha-preview"><canvas id="photo-preview-canvas" width="'+activeCanvas.width+'" height="'+activeCanvas.height+'" aria-label="本機照片預覽，棋盤格代表透明背景"></canvas></div><div class="photo-preview-tools">'+photoEditButtons()+'<button type="button" class="photo-button" data-action="remove-photo">移除照片</button></div>':'';
+ if(activeCanvas)$('photo-preview-canvas').getContext('2d').drawImage(activeCanvas,0,0);
+ $('intro-photo-status').textContent=photoUrl?photoStateText()+'。同一張照片會用於所有色框。':'選正面頭肩近照，讓臉清楚可見。也可不放照片，改用鏡子與相近色衣物。';
  if(activeScreen==='quiz')renderQuestion();
 }
-function clearPhoto(announce=true){photoLoadId++;if(photoUrl)URL.revokeObjectURL(photoUrl);photoUrl=null;updatePhotoUi();if(announce)notify('照片已從本次頁面移除，答案保持不變。');}
+function releasePhotoResources(){
+ for(const url of new Set([photoOriginalUrl,photoCutoutUrl,photoUrl]))if(url)URL.revokeObjectURL(url);
+ photoUrl=null;photoOriginalUrl=null;photoCutoutUrl=null;photoOriginalCanvas=null;photoCutoutCanvas=null;photoOriginalTransparent=false;photoBusy=false;photoProcessingMessage='';
+}
+function clearPhoto(announce=true){photoLoadId++;releasePhotoResources();updatePhotoUi();if(announce)notify('照片已從本次頁面移除，答案保持不變。');}
+function canvasPng(canvas){return new Promise((resolve,reject)=>canvas.toBlob(blob=>blob?resolve(blob):reject(new Error('Image encoding failed')),'image/png'));}
+function transparentPixelRatio(canvas){const data=canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data;let transparent=0;for(let i=3;i<data.length;i+=4)if(data[i]<250)transparent++;return transparent/(canvas.width*canvas.height);}
 async function loadPhoto(file){
  if(!file)return;const id=++photoLoadId;$('photo-file').value='';
+ // A new selection cancels an in-flight cutout even when the replacement is invalid.
+ if(photoBusy){photoBusy=false;photoProcessingMessage='';updatePhotoUi();}
  if(!['image/jpeg','image/png','image/webp'].includes(file.type)){notify('請選擇 JPG、PNG 或 WebP 圖片。');return;}
- if(file.size>10*1024*1024){notify('照片請小於 10 MB，可先裁切成正面近照。');return;}
+ if(file.size>10*1024*1024){notify('照片請小於 10 MB，可先裁切成正面頭肩近照。');return;}
  const sourceUrl=URL.createObjectURL(file);let prepared=null;
  try{
   const img=new Image();await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;img.src=sourceUrl;});
   if(!img.naturalWidth||!img.naturalHeight)throw new Error('Invalid image');
-  const scale=Math.min(1,900/Math.max(img.naturalWidth,img.naturalHeight));const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.naturalWidth*scale));canvas.height=Math.max(1,Math.round(img.naturalHeight*scale));const ctx=canvas.getContext('2d');if(!ctx)throw new Error('Canvas unavailable');ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/jpeg',.9));if(!blob)throw new Error('Image encoding failed');
-  prepared=URL.createObjectURL(blob);if(id!==photoLoadId){URL.revokeObjectURL(prepared);return;}if(photoUrl)URL.revokeObjectURL(photoUrl);photoUrl=prepared;updatePhotoUi();notify('照片已載入，接下來可以直接並排比色。');
+  const scale=Math.min(1,900/Math.max(img.naturalWidth,img.naturalHeight));const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.naturalWidth*scale));canvas.height=Math.max(1,Math.round(img.naturalHeight*scale));const ctx=canvas.getContext('2d');if(!ctx)throw new Error('Canvas unavailable');
+  ctx.drawImage(img,0,0,canvas.width,canvas.height); // Preserve alpha; do not flatten transparent PNGs onto white.
+  const blob=await canvasPng(canvas);prepared=URL.createObjectURL(blob);
+  if(id!==photoLoadId){URL.revokeObjectURL(prepared);return;}
+  releasePhotoResources();photoOriginalCanvas=canvas;photoOriginalUrl=prepared;photoUrl=prepared;photoOriginalTransparent=transparentPixelRatio(canvas)>.01;
+  updatePhotoUi();notify(photoOriginalTransparent?'透明背景已保留，可直接開始比色。':'照片已載入。可選擇自動去背，讓色框直接貼近人像。');
  }catch(error){if(prepared)URL.revokeObjectURL(prepared);if(id===photoLoadId)notify('這張圖片無法開啟，請換一張 JPG、PNG 或 WebP。');}
  finally{URL.revokeObjectURL(sourceUrl);$('photo-file').value='';}
 }
+// This optional feature downloads executable/model assets only. No photo or mask is sent to a server.
+function getPortraitSegmenter(){
+ if(!portraitSegmenterPromise){
+  portraitSegmenterPromise=(async()=>{
+   const {FilesetResolver,ImageSegmenter}=await import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.32/vision_bundle.mjs');
+   const vision=await FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.32/wasm');
+   return await ImageSegmenter.createFromOptions(vision,{baseOptions:{modelAssetPath:'https://storage.googleapis.com/mediapipe-models/image_segmenter/selfie_multiclass_256x256/float32/1/selfie_multiclass_256x256.tflite',delegate:'CPU'},runningMode:'IMAGE',outputCategoryMask:false,outputConfidenceMasks:true});
+  })().catch(error=>{portraitSegmenterPromise=null;throw error;});
+ }
+ return portraitSegmenterPromise;
+}
+function foregroundAlpha(backgroundConfidence){const foreground=1-Math.max(0,Math.min(1,backgroundConfidence));const t=Math.max(0,Math.min(1,(foreground-.18)/.64));return Math.round(255*t*t*(3-2*t));}
+function trimTransparentCanvas(canvas){
+ const {width,height}=canvas,data=canvas.getContext('2d').getImageData(0,0,width,height).data;let left=width,right=-1,top=height,bottom=-1,count=0;
+ for(let y=0;y<height;y++)for(let x=0;x<width;x++)if(data[(y*width+x)*4+3]>40){left=Math.min(left,x);right=Math.max(right,x);top=Math.min(top,y);bottom=Math.max(bottom,y);count++;}
+ if(count<width*height*.005)throw new Error('No clear portrait');
+ const pad=Math.max(4,Math.round(Math.max(right-left+1,bottom-top+1)*.025));left=Math.max(0,left-pad);right=Math.min(width-1,right+pad);top=Math.max(0,top-pad);bottom=Math.min(height-1,bottom+pad);
+ const out=document.createElement('canvas');out.width=right-left+1;out.height=bottom-top+1;out.getContext('2d').drawImage(canvas,left,top,out.width,out.height,0,0,out.width,out.height);return out;
+}
+async function removePhotoBackground(){
+ if(!photoOriginalCanvas||photoBusy||photoOriginalTransparent)return;
+ if(photoCutoutUrl){photoUrl=photoCutoutUrl;updatePhotoUi();notify('已切換為去背圖，答案保持不變。');return;}
+ const id=photoLoadId,original=photoOriginalCanvas;photoBusy=true;photoProcessingMessage='首次正在載入本機去背工具，可能需要數十秒…';updatePhotoUi();let deadline;
+ try{
+  const segmenter=await Promise.race([getPortraitSegmenter(),new Promise((_,reject)=>{deadline=setTimeout(()=>reject(new Error('Model loading timeout')),45000);})]);clearTimeout(deadline);
+  if(id!==photoLoadId)return;photoProcessingMessage='正在本機分離人物與背景…';updatePhotoUi();
+  await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+  if(id!==photoLoadId)return;
+  let matte;
+  segmenter.segment(original,segmentation=>{
+   const masks=segmentation.confidenceMasks;if(!masks||masks.length!==6)throw new Error('Unexpected portrait model output');
+   // SelfieMulticlass category 0 is background. Keep all other regions (hair, skin, clothes, accessories).
+   const background=masks[0],values=background.getAsFloat32Array();matte=document.createElement('canvas');matte.width=background.width;matte.height=background.height;const maskContext=matte.getContext('2d'),pixels=maskContext.createImageData(matte.width,matte.height);let kept=0;
+   for(let i=0;i<values.length;i++){const alpha=foregroundAlpha(values[i]);pixels.data[i*4]=255;pixels.data[i*4+1]=255;pixels.data[i*4+2]=255;pixels.data[i*4+3]=alpha;if(alpha>128)kept++;}
+   if(kept<values.length*.005||kept>values.length*.995)throw new Error('No clear portrait');maskContext.putImageData(pixels,0,0);
+  });
+  if(id!==photoLoadId)return;
+  const composed=document.createElement('canvas');composed.width=original.width;composed.height=original.height;const ctx=composed.getContext('2d');ctx.drawImage(original,0,0);ctx.globalCompositeOperation='destination-in';ctx.drawImage(matte,0,0,composed.width,composed.height);ctx.globalCompositeOperation='source-over';
+  const cutout=trimTransparentCanvas(composed);if(transparentPixelRatio(cutout)<.01)throw new Error('No clear portrait');const blob=await canvasPng(cutout);
+  if(id!==photoLoadId)return;photoCutoutCanvas=cutout;photoCutoutUrl=URL.createObjectURL(blob);photoUrl=photoCutoutUrl;notify('已完成去背。請先確認髮絲與臉部邊緣，再繼續比色。');
+ }catch(error){if(id===photoLoadId)notify(error.message==='No clear portrait'?'未能清楚分離人像，已保留原照。可換一張背景較單純的近照，或使用透明 PNG。':'去背工具未能完成處理，已保留原照。請確認網路後重試，或使用透明 PNG。');}
+ finally{clearTimeout(deadline);if(id===photoLoadId){photoBusy=false;photoProcessingMessage='';updatePhotoUi();}}
+}
+function restorePhoto(){if(!photoOriginalUrl)return;photoUrl=photoOriginalUrl;updatePhotoUi();notify('已還原原照，答案保持不變。');}
 
 function finishQuiz(){if(answers.some(a=>a===null))return;showScreen('loading',false);calculationTimer=setTimeout(()=>{result=analyze(answers);renderResult();showScreen('result');},650);}
 function dimensionDescription(r){return [r.dims[0]>.12?'Warm':r.dims[0]<-.12?'Cool':'Neutral',r.dims[1]>.12?'Light':r.dims[1]<-.12?'Deep':'Medium',r.dims[2]>.12?'Bright':r.dims[2]<-.12?'Muted':'Balanced'];}
@@ -223,7 +294,7 @@ async function downloadResult(){
 function retakeQuiz(){clearTimeout(calculationTimer);clearPhoto(false);answers=Array(20).fill(null);current=0;result=null;if(downloadUrl){URL.revokeObjectURL(downloadUrl);downloadUrl=null;}$('results-content').innerHTML='';showScreen('intro');notify('已清除本次答案，準備開始新的色彩探索。');}
 $('start-button').addEventListener('click',()=>showScreen('intro'));$('begin-button').addEventListener('click',startQuiz);$('home-link').addEventListener('click',showHome);
 document.querySelectorAll('[data-home-anchor]').forEach(a=>a.addEventListener('click',event=>{event.preventDefault();showScreen('home',false);document.getElementById(a.dataset.homeAnchor).scrollIntoView({behavior:'smooth'});}));
-document.addEventListener('click',event=>{const action=event.target.closest('[data-action]')?.dataset.action;if(action==='home')showHome();if(action==='intro')showScreen('intro');if(action==='review'){current=19;renderQuestion();showScreen('quiz');}if(event.target.closest('#retake-button'))retakeQuiz();if(event.target.closest('#download-button'))downloadResult();if(event.target.closest('#confirm-range'))saveRange();if(action==='upload-photo')$('photo-file').click();if(action==='remove-photo')clearPhoto();});
+document.addEventListener('click',event=>{const action=event.target.closest('[data-action]')?.dataset.action;if(action==='home')showHome();if(action==='intro')showScreen('intro');if(action==='review'){current=19;renderQuestion();showScreen('quiz');}if(event.target.closest('#retake-button'))retakeQuiz();if(event.target.closest('#download-button'))downloadResult();if(event.target.closest('#confirm-range'))saveRange();if(action==='upload-photo')$('photo-file').click();if(action==='remove-photo')clearPhoto();if(action==='cutout-photo')removePhotoBackground();if(action==='restore-photo')restorePhoto();});
 $('photo-file').addEventListener('change',event=>loadPhoto(event.target.files[0]));
 $('answer-form').addEventListener('submit',event=>event.preventDefault());
 $('answer-form').addEventListener('change',event=>{if(event.target.name==='answer'){selectAnswer(event.target.value==='unknown'?'unknown':Number(event.target.value));if(QUESTIONS[current].type==='slider'&&event.target.value==='unknown'){$('slider-box').dataset.answered='false';$('slider-output').textContent='已選擇不確定；拖動滑桿可重新作答。';}}});
