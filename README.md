@@ -2,6 +2,10 @@
 
 用 20 題探索個人色彩，提供四季、12 型／16 型結果與日常搭配靈感。
 
+正式網站：[https://sin-yi-hi.github.io/personal-color-quiz/](https://sin-yi-hi.github.io/personal-color-quiz/)
+
+GitHub Pages 已於 2026-10-16 發布成功，並完成公開網址的完整操作驗收。
+
 ## 開始使用
 
 直接在瀏覽器開啟 `index.html` 即可。網站完整整合 HTML、CSS、JavaScript 與 Canvas，不需要安裝套件、啟動伺服器、後端、資料庫或 API。沒有外部圖片、字型或程式依賴，離線也能操作。
@@ -44,7 +48,7 @@
 4. Branch 選 **main**，資料夾選 **/ (root)**，按 **Save**。
 5. 等 GitHub 的 Pages 建置完成，再開啟 `https://sin-yi-hi.github.io/personal-color-quiz/`。
 
-上面的網址是預定發布位置，是否已發布以 GitHub Pages 顯示的成功狀態為準。建置後應再檢查完整測驗、上一題修改、下載、重新測驗及手機顯示。
+此專案已從 main 根目錄發布成功。後續更新 index.html 並推送 main 後，GitHub Pages 會重新建置；建置後應再檢查完整測驗、上一題修改、下載、重新測驗及手機顯示。
 
 設定步驟參考 [GitHub Pages 官方文件](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。
 

@@ -39,4 +39,17 @@
 - PNG 實際下載為 `color-muse-true-spring.png`，檢視圖卡文字、色票、分數與底部說明均完整。
 - 瀏覽器未記錄 JavaScript 錯誤。
 
-GitHub Pages 公開網址的驗收與網站本機測試分開紀錄；未完成部署時，不宣稱公開網址已上線。
+## 2026-10-16 · GitHub Pages 發布與公開網址驗收
+
+- 原始碼上傳至 `sin-yi-hi/personal-color-quiz` 的 main 分支。
+- 發布來源為 main 根目錄，GitHub 的 build、report-build-status 與 deploy 均成功。
+- 正式網址：<https://sin-yi-hi.github.io/personal-color-quiz/>。
+- 在正式網址完成 20 題：得到 Winter／True Winter／True Winter，接近度為 91%、5%、2%、2%，六色色票與完整建議均正常。
+- 驗證上一題可保留選擇，再修改答案並繼續。
+- 從結果頁返回第 20 題，修改後接近度重算為 88%、7%、3%、2%。
+- 實際下載 `color-muse-true-winter.png`，下載後的圖片預覽可見。
+- 重新測驗後，完成數為 0、沒有勾選答案、下一題停用。
+- 公開網站在 390px 手機及 1280px 桌機下，scrollWidth 均等於 clientWidth，沒有橫向捲動。
+- 正式網站瀏覽器未記錄 JavaScript 錯誤。
+
+上述驗收使用程式碼提交 `8d48ea5e066b27a18cdf4fd1baeb2580bf85586f`；後續提交僅補充發布與驗收文件。
