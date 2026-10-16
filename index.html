@@ -34,6 +34,14 @@
 @media(max-width:540px){#answer-form{padding:10px}.sequential-stage.color-block{height:280px}.sequential .color-caption strong{font-size:12px}.sequential .color-caption small{font-size:9px}.sequential .color-answers{gap:10px}.comparison-toolbar span{font-size:9px}.method-note{padding:14px}.comparison-outcomes{gap:8px}.photo-mode-group{flex-direction:row}.alpha-preview{width:110px}}
 
 .result-status{display:inline-block;margin-top:12px;padding:5px 10px;border:1px solid #52614033;border-radius:4px;font-size:11px}.neutral-result-note{font-size:12px;margin-top:22px;max-width:320px}.photo-mode-group{max-width:100%}
+
+/* v6: make evidence and review controls readable without competing with the drapes. */
+.local-context{padding:20px;border:1px solid var(--line);border-radius:5px;background:#fffefa;margin-top:24px}.local-context h2{font-size:16px;font-weight:500}.local-context p{font-size:13px;color:#626659;margin-top:10px}
+.result-checks{background:#fffefa;border:1px solid var(--line);border-radius:5px;padding:22px;margin-top:20px}.result-checks h2{font-size:17px;font-weight:500}.result-checks p{font-size:13px;margin-top:12px}.result-checks .check-detail{font-size:11px;color:#72766b}.evidence-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.evidence-chips span{padding:5px 10px;background:#eeefe9;border-radius:3px;font-size:12px}.result-checks .recheck-links{margin-top:14px}
+.observed-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-top:16px}.observed-swatch{background:#fff;border:1px solid #ddd;border-radius:4px;padding:7px;min-width:0;text-align:left}.observed-swatch i{display:block;height:62px;border-radius:2px}.observed-swatch b,.observed-swatch small{display:block;margin-top:5px;font-size:11px}.observed-swatch small{font-size:10px;color:#72766b}
+.answer-review-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:15px}.answer-review-item{padding:12px;border:1px solid var(--line);border-radius:3px;background:#fff;text-align:left;min-width:0;min-height:65px}.answer-review-item b,.answer-review-item span{display:block;font-size:12px}.answer-review-item span{font-size:11px;color:#72766b;margin-top:4px}.photo-controls .cutout-disclosure{font-size:11px}.comparison-caption{font-size:12px}.observation-guide p{font-size:12px}.question-hint{font-size:13px}
+@media(max-width:540px){.observed-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.answer-review-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.result-checks{padding:17px}.local-context{padding:16px}.photo-controls .photo-button{min-height:44px}.observation-guide p{font-size:12px}.photo-controls .cutout-disclosure{font-size:11px}}
+
 </style>
 </head>
 <body>
@@ -56,7 +64,7 @@
    <article class="season-preview"><span class="number">04 / 冬</span><h3 class="serif">Winter</h3><p>像星夜一樣，鮮明又俐落。</p><div class="mini-palette" aria-hidden="true"><i style="background:#81495a"></i><i style="background:#435a78"></i><i style="background:#577b72"></i><i style="background:#45464e"></i></div><small>Cool · Deep · Bright</small></article>
   </div></section>
  </section>
- <section id="intro-screen" hidden aria-labelledby="intro-title"><div class="inner-top"><button class="back-link" data-action="home">← 返回首頁</button><span>BEFORE WE BEGIN</span></div><div class="instructions"><p class="eyebrow">A moment, just for you</p><h1 class="serif" id="intro-title" tabindex="-1">Before you find<br><em>your colors.</em></h1><p class="intro-desc">不用先知道自己適合什麼。跟著色卡，一次觀察一個地方。</p><div class="photo-setup"><span class="beginner-tag">新手觀察模式 · 不必回想穿搭經驗</span><h2>把自己的照片放進色框，直接比較。</h2><p>選一張自然光、無濾鏡的正面頭肩近照。載入後可選「去背・只留臉頸」，移除頭髮與衣服，先觀察臉與頸部；也可切回灰色遮蓋或完整人像；也支援透明 PNG。</p><div class="photo-setup-actions"><button type="button" class="photo-button" data-action="upload-photo">選擇照片（選用）</button><span class="photo-local-note">照片僅本機處理 · 不上傳</span></div><p class="photo-status" id="intro-photo-status" role="status">選正面頭肩近照，讓臉清楚可見。也可不放照片，改用鏡子與相近色衣物。</p><div class="photo-preview" id="intro-photo-preview"></div><p class="photo-limit">螢幕色框只提供視覺對照，不能模擬真實布料的反光。照片的光線、妝容與螢幕設定也會影響觀察。支援 JPG、PNG、WebP，最大 10 MB。自動去背首次需連網載入工具，照片不會上傳；去背不會校正原照光線或色偏，髮絲與耳環邊緣可能需要換照再試。</p></div><div class="instruction-grid"><article class="instruction-item"><span>01</span><h2>先固定光線與螢幕</h2><p>用均勻自然光、無濾鏡的素顏照，避免有色鏡片與遮臉飾物。暫時關閉夜覽、護眼／藍光濾鏡、True Tone 與鮮豔模式，保持亮度固定。</p></article><article class="instruction-item"><span>02</span><h2>每次只看一個小地方</h2><p>跟著題目看眼下、鼻翼、嘴角，或眉眼與唇部輪廓，不用同時判斷整張臉。</p></article><article class="instruction-item"><span>03</span><h2>先看整體，再看局部</h2><p>變白、變粉、陰影變淡不一定更適合。比較膚色自然度與五官清晰度；也可固定照片位置，切換 A／B。</p></article><article class="instruction-item"><span>04</span><h2>差不多與不確定，都可以</h2><p>已比較但差別不大，選「差不多」；看不清楚或沒有工具，就選「不確定」。</p></article></div><p class="notice">這是趣味與自我探索測驗，不是專業個人色彩診斷。答案與照片只存在目前頁面的記憶體；照片可隨時移除，重新整理或重新測驗會全部清除。</p><details class="method-note" id="research-method"><summary>這個測驗依據什麼？哪些結果仍有限制？</summary><p>這是參考色彩科學改良的觀察工具。研究支持周邊顏色、光線與攝影條件會影響膚色的視覺感受；尚不能因此宣稱本測驗的四季或 12／16 型診斷準確。</p><ul><li>色票以 Oklch 分別控制色相、明度、彩度，再轉成 sRGB。改善混雜變因，並不代表你的螢幕已校色，也不是專業標準色布。</li><li>不以髮色深、瞳色深或「看起來變白」直接判定冬季。可切換臉頸去背、中性遮髮與完整人像；遮髮是控制視覺干擾的設計選擇，未經臨床或專業診斷驗證。</li><li>17 題用來計分，3 題交換順序複核。每次都有探索提案：有方向時給最接近季型，線索弱或複核矛盾時標為暫定；完全沒有方向時提供中性色探索型。冷暖觀察明確時，優先比較相應的暖季或冷季。這些門檻是網站規則，不是研究證實的診斷界線。</li><li>照片不會跟著色框改變光線；螢幕比色無法重現布料反射。邊緣有殘色或五官被遮住時，請回原照檢查，必要時換照或用中性灰布實際遮髮。</li></ul><p>可查核來源：<a href="https://cie.co.at/eilvterm/17-32-025" target="_blank" rel="noopener">CIE：背景與色貌</a> · <a href="https://www.w3.org/TR/css-color-4/#specifying-oklab-oklch" target="_blank" rel="noopener">W3C：Oklch</a> · <a href="https://www.jstage.jst.go.jp/article/jcsaj/42/6%2B/42_58/_article/-char/ja/" target="_blank" rel="noopener">日本色彩學會：明度／彩度</a> · <a href="https://www.jstage.jst.go.jp/article/jcsaj/42/3%2B/42_215/_article/-char/ja" target="_blank" rel="noopener">日本色彩學會：髮色背景</a> · <a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002179283" target="_blank" rel="noopener">韓國研究：診斷因素相關性</a> · <a href="https://arxiv.org/abs/2106.11240" target="_blank" rel="noopener">英語研究：照片膚色測量</a></p><p>韓國文獻亦提供簡體中文摘要；因素相關性、喜好或腦波變化，不能當作本網站診斷效度的證明。完整查核與改版紀錄：<a href="https://github.com/sin-yi-hi/personal-color-quiz/blob/main/RESEARCH.md" target="_blank" rel="noopener">研究與方法說明</a>。</p></details>
+ <section id="intro-screen" hidden aria-labelledby="intro-title"><div class="inner-top"><button class="back-link" data-action="home">← 返回首頁</button><span>BEFORE WE BEGIN</span></div><div class="instructions"><p class="eyebrow">A moment, just for you</p><h1 class="serif" id="intro-title" tabindex="-1">Before you find<br><em>your colors.</em></h1><p class="intro-desc">不用先知道自己適合什麼。跟著色卡，一次觀察一個地方。</p><div class="photo-setup"><span class="beginner-tag">新手觀察模式 · 不必回想穿搭經驗</span><h2>把自己的照片放進色框，直接比較。</h2><p>選一張自然光、無濾鏡的正面頭肩近照。載入後可選「去背・只留臉頸」，移除頭髮與衣服，先觀察臉與頸部；也可切回灰色遮蓋或完整人像；也支援透明 PNG。</p><div class="photo-setup-actions"><button type="button" class="photo-button" data-action="upload-photo">選擇照片（選用）</button><span class="photo-local-note">照片僅本機處理 · 不上傳</span></div><p class="photo-status" id="intro-photo-status" role="status">選正面頭肩近照，讓臉清楚可見。也可不放照片，改用鏡子與相近色衣物。</p><div class="photo-preview" id="intro-photo-preview"></div><p class="photo-limit">螢幕色框只提供視覺對照，不能模擬真實布料的反光。照片的光線、妝容與螢幕設定也會影響觀察。支援 JPG、PNG、WebP，最大 10 MB。自動去背首次需連網載入工具，照片不會上傳；去背不會校正原照光線或色偏，髮絲與耳環邊緣可能需要換照再試。</p></div><div class="local-context"><h2>膚色偏黃，不等於只能穿暖色。</h2><p>台灣人也有不同的色彩表現。這裡觀察的是配色效果，不以族群、黑髮或深瞳分型；「顯白、去黃」也只是視覺效果，不能單獨當作適合的答案。</p><p>照片先確認：只有一張正面臉、無美肌或底妝校色、臉沒有過曝、去背後五官完整。先用同一張照片完成，再換另一張條件相近的照片重測。</p></div><div class="instruction-grid"><article class="instruction-item"><span>01</span><h2>先固定光線與螢幕</h2><p>用均勻自然光、無濾鏡的素顏照，避免有色鏡片與遮臉飾物。暫時關閉夜覽、護眼／藍光濾鏡、True Tone 與鮮豔模式，保持亮度固定。</p></article><article class="instruction-item"><span>02</span><h2>每次只看一個小地方</h2><p>跟著題目看眼下、鼻翼、嘴角，或眉眼與唇部輪廓，不用同時判斷整張臉。</p></article><article class="instruction-item"><span>03</span><h2>先看整體，再看局部</h2><p>變白、變粉、陰影變淡不一定更適合。比較膚色自然度與五官清晰度；也可固定照片位置，切換 A／B。</p></article><article class="instruction-item"><span>04</span><h2>差不多與不確定，都可以</h2><p>已比較但差別不大，選「差不多」；看不清楚或沒有工具，就選「不確定」。</p></article></div><p class="notice">這是趣味與自我探索測驗，不是專業個人色彩診斷。答案與照片只存在目前頁面的記憶體；照片可隨時移除，重新整理或重新測驗會全部清除。</p><details class="method-note" id="research-method"><summary>這個測驗依據什麼？哪些結果仍有限制？</summary><p>這是參考色彩科學改良的觀察工具。研究支持周邊顏色、光線與攝影條件會影響膚色的視覺感受；尚不能因此宣稱本測驗的四季或 12／16 型診斷準確。</p><ul><li>色票以 Oklch 分別控制色相、明度、彩度，再轉成 sRGB。改善混雜變因，並不代表你的螢幕已校色，也不是專業標準色布。</li><li>不以髮色深、瞳色深或「看起來變白」直接判定冬季。可切換臉頸去背、中性遮髮與完整人像；遮髮是控制視覺干擾的設計選擇，未經專業診斷效度驗證。</li><li>17 題用來計分，3 題交換順序複核。每次都有探索提案：有方向時給最接近季型，線索弱或複核矛盾時標為暫定；完全沒有方向時提供中性色探索型。冷暖觀察明確時，優先比較相應的暖季或冷季。這些門檻是網站規則，不是研究證實的診斷界線。</li><li>照片不會跟著色框改變光線；螢幕比色無法重現布料反射。邊緣有殘色或五官被遮住時，請回原照檢查，必要時換照或用中性灰布實際遮髮。</li></ul><p>東亞相關資料：<a href="https://www.p-color.jp/about/strengths/" target="_blank" rel="noopener">日本協會：膚色與適合色不同</a> · <a href="https://doi.org/10.1111/cote.12828" target="_blank" rel="noopener">中國研究：服色、顯白與偏好</a> · <a href="https://kci.go.kr/kciportal/landing/article.kci?arti_id=ART002801658" target="_blank" rel="noopener">韓國研究：自評與他評差異</a>。這些資料不能推定台灣人的季型比例，也不能取代本站的真人驗證。</p><p>可查核來源：<a href="https://cie.co.at/eilvterm/17-32-025" target="_blank" rel="noopener">CIE：背景與色貌</a> · <a href="https://www.w3.org/TR/css-color-4/#specifying-oklab-oklch" target="_blank" rel="noopener">W3C：Oklch</a> · <a href="https://www.jstage.jst.go.jp/article/jcsaj/42/6%2B/42_58/_article/-char/ja/" target="_blank" rel="noopener">日本色彩學會：明度／彩度</a> · <a href="https://www.jstage.jst.go.jp/article/jcsaj/42/3%2B/42_215/_article/-char/ja" target="_blank" rel="noopener">日本色彩學會：髮色背景</a> · <a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002179283" target="_blank" rel="noopener">韓國研究：診斷因素相關性</a> · <a href="https://arxiv.org/abs/2106.11240" target="_blank" rel="noopener">英語研究：照片膚色測量</a></p><p>韓國文獻亦提供簡體中文摘要；因素相關性、喜好或腦波變化，不能當作本網站診斷效度的證明。完整查核與改版紀錄：<a href="https://github.com/sin-yi-hi/personal-color-quiz/blob/main/RESEARCH.md" target="_blank" rel="noopener">研究與方法說明</a>。</p></details>
 <div class="instruction-bottom"><button class="primary" id="begin-button">開始第一題 <span class="arrow" aria-hidden="true">→</span></button><small>20 題 · 約 5–8 分鐘 · 一次觀察一個地方</small></div></div></section>
  <section id="quiz-screen" hidden aria-labelledby="question-title"><div class="inner-top"><button class="back-link" data-action="intro">← 測驗說明</button><span>YOUR COLOR JOURNEY</span></div><div class="quiz-shell"><div class="progress-meta"><span id="question-count">QUESTION 01 / 20</span><span id="completion-text">已完成 0 / 20</span></div><div class="progress-track" id="quiz-progress" role="progressbar" aria-label="測驗完成進度" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div><div class="quiz-grid"><div class="question"><p class="question-kicker" id="question-kicker"></p><h1 id="question-title" tabindex="-1"></h1><p class="question-hint" id="question-hint"></p><div id="quiz-photo-tools"></div><div class="observation-guide" id="observation-guide" aria-label="本題觀察方法"></div><form id="answer-form" aria-labelledby="question-title" aria-describedby="question-hint observation-guide"></form><div class="question-nav"><button class="back-link" id="previous-button">← 上一題</button><button class="primary" id="next-button" disabled>下一題 <span class="arrow" aria-hidden="true">→</span></button></div></div><aside class="quiz-aside"><div class="aside-sun" aria-hidden="true">✳</div><h2>Look closer.<br>One detail at a time.</h2><p>不用知道自己適合什麼。<br>跟著題目指定的部位比較就好。<br><br>① 眼下與嘴角的暗影<br>② 膚色是否均勻<br>③ 眉眼與唇部是否清楚<br><br>變白或變粉不等於更適合。<br>差別不明顯時不用猜。<br><br>照片只作視覺對照，去背也在本機進行；不會上傳或分析膚色。</p><div class="aside-palette" aria-hidden="true"><i style="background:#c99b83"></i><i style="background:#d8bc97"></i><i style="background:#b6bda0"></i><i style="background:#939d82"></i><i style="background:#6d7c68"></i></div><p class="aside-caption">THERE IS NO WRONG SHADE OF YOU.</p></aside></div></div></section>
  <section id="loading-screen" hidden aria-labelledby="loading-title"><div class="calculating" role="status"><div class="loading-swatches" aria-hidden="true"><i style="background:#c99b83"></i><i style="background:#d8bc97"></i><i style="background:#b6bda0"></i><i style="background:#939d82"></i></div><h1 class="serif" id="loading-title">Finding your color story.</h1><p>正在整理你的色彩線索…</p></div></section>
@@ -79,18 +87,18 @@ function oklchRgb([L,C,h]){
 }
 function stimulusHex(lch){const rgb=oklchRgb(lch);if(rgb.some(v=>v<0||v>1))throw new Error('Stimulus outside sRGB: '+lch);return '#'+rgb.map(v=>Math.round(v*255).toString(16).padStart(2,'0')).join('').toUpperCase();}
 const AXIS_NAMES=['TEMPERATURE / 冷暖','VALUE / 明度','CHROMA / 彩度'];
-const OBSERVATION='先看鼻翼與嘴角的色差，再看眼睛和嘴唇的輪廓。單純變白、變粉或暗影變淡，不一定代表更適合；兩項感受相反時，選不確定。';
+const OBSERVATION='先看臉與色票是否協調，再看嘴唇和眼睛的輪廓。不要只選「顯白、去黃」的一邊，也不用選顏色最淡的一邊。整體協調與局部觀察矛盾時，可以選不確定。';
 function pair(id,axis,title,positive,negative){
  const weight=[0,0,0];weight[axis]=1;
- return {id,axis:AXIS_NAMES[axis],axisIndex:axis,type:'color',title,hint:'比較同一張照片；A、B 沒有預設的好壞，也不代表固定季型。',do:'按「固定位置比較」可在同一位置切換 A／B；中途看一下中性灰，再回來比較。',look:OBSERVATION,
+ return {id,axis:AXIS_NAMES[axis],axisIndex:axis,type:'color',title,hint:'比較同一張照片；A、B 沒有預設的好壞，也不代表固定季型。',do:'依序看 A／B，中途看一下中性灰；想同時看兩邊可改為並排比較。',look:OBSERVATION,
  options:[{label:'色票',zh:'色票',score:weight,lch:positive,hex:stimulusHex(positive)},{label:'色票',zh:'色票',score:weight.map(v=>-v),lch:negative,hex:stimulusHex(negative)},makeOption('看過了，兩邊差不多'),unsure()]};
 }
-function slider(id,axis,title,lchValues,labels){const vector=[0,0,0];vector[axis]=1;return {id,axis:AXIS_NAMES[axis],axisIndex:axis,type:'slider',title,hint:'照片保持原色，只有色框改變。看不出差異，可以確認中間值或選不確定。',do:'慢慢來回試一次，先看整體膚色，再看眉眼與嘴唇。',look:OBSERVATION,left:labels[0],right:labels[4],labels,vector,stageLch:lchValues,stageColors:lchValues.map(stimulusHex)};}
+function slider(id,axis,title,lchValues,labels){const vector=[0,0,0];vector[axis]=1;return {id,axis:AXIS_NAMES[axis],axisIndex:axis,type:'slider',title,hint:'拖動只預覽，找到位置後按確認才算作答。看不出差異，可確認中間值或選不確定。',do:'慢慢來回試一次，先看整體膚色，再看眉眼與嘴唇。',look:OBSERVATION,left:labels[0],right:labels[4],labels,vector,stageLch:lchValues,stageColors:lchValues.map(stimulusHex)};}
 function repeatPair(id,source){return {...source,id,repeatOf:source.id,title:'換個順序再比較：這次哪邊的臉比較自然？',hint:'這是一組前面看過的色票，順序會交換。用來檢查觀察是否穩定，不會重複加分。'};}
 const t1=pair('peach-rose',0,'兩個粉色旁，哪邊的膚色與五官比較自然？',[.75,.09,50],[.75,.09,350]);
 const v1=pair('teal-depth',1,'藍綠色由淺到深，哪邊的臉比較自然？',[.80,.055,190],[.45,.055,190]);
 const c1=pair('rose-chroma',2,'兩個玫瑰色，哪邊和你的臉比較平衡？',[.67,.13,350],[.67,.035,350]);
-const c3=pair('green-chroma',2,'這兩個綠色，哪邊比較不搶走五官的焦點？',[.70,.13,135],[.70,.035,135]);
+const c3=pair('green-chroma',2,'這兩個綠色，哪邊和膚色、五官更協調？',[.70,.13,135],[.70,.035,135]);
 const QUESTIONS=[
  t1,v1,c1,
  pair('red-hue',0,'這兩個紅色旁，哪邊的整體膚色比較自然？',[.62,.12,40],[.62,.12,350]),
@@ -112,7 +120,7 @@ const QUESTIONS=[
 ];
 // Alternate polarity per axis; a session flip counterbalances A/B without moving saved answers.
 function buildDisplayOrders(random=Math.random){const flips=[0,1,2].map(()=>random()<.5),counts=[0,0,0],orders={};for(const q of QUESTIONS){if(q.type!=='color')continue;if(q.repeatOf){orders[q.id]=[...orders[q.repeatOf]].reverse();continue;}const reverse=(counts[q.axisIndex]++%2===1)!==flips[q.axisIndex];orders[q.id]=reverse?[1,0]:[0,1];}return orders;}
-let displayOrders=buildDisplayOrders(),comparisonSequential=false,comparisonPreview='gray';
+let displayOrders=buildDisplayOrders(),comparisonSequential=true,pendingRange=false;
 
 const SEASONS={
  Spring:{zh:'春季型',vector:[1,.65,.75],bg:'#E7D6B4',colors:[['Coral','#E98A73'],['Apricot','#EDB580'],['Butter Yellow','#E9D28A'],['Fresh Green','#9CB569'],['Aqua','#79BCAF'],['Warm Pink','#E9AC9E']],neutrals:'Ivory 象牙白 · Warm Beige 暖米色 · Camel 駝色',care:'大面積純黑、冰冷灰、過暗的酒紅，可用小面積點綴',lip:'珊瑚、杏桃、暖紅',blush:'蜜桃、淺杏、暖粉',eyes:'香檳、淺金棕、暖米色',hair:'蜂蜜棕、暖栗棕、金米棕',hairCare:'過冷的藍黑、重灰棕，靠近臉部時多比較氣色',metals:'Gold 金色 · Rose Gold 玫瑰金 · Champagne Gold 香檳金',style:'試試清爽的淺色底，加一點清亮暖彩。避免顏色堆疊得太厚重。'},
@@ -154,6 +162,9 @@ function analyze(finalAnswers){
  const tied=ranked[0].share-ranked[1].share<8;
  const reasons=[];
  if(axisCounts.some(n=>n<3))reasons.push('至少一個維度少於 3 次有效觀察');
+ if(positive.some((n,j)=>n+negative[j]<3))reasons.push('至少一個維度少於 3 次有方向的選擇');
+ if(checkedRepeats<3)reasons.push('部分換序複核還無法比對');
+ if(SEASONS[ranked[0].name].vector.some((v,j)=>v*dims[j]<-.15))reasons.push('部分特徵與第一季型的典型組合不同');
  if(Math.abs(dims[0])<.2)reasons.push('冷暖方向還不明確');
  if([1,2].every(j=>Math.abs(dims[j])<.2))reasons.push('深淺與彩度的差異還不明顯');
  if(conflicts.length)reasons.push('相同色票換順序後，出現相反的選擇');
@@ -176,9 +187,10 @@ function showScreen(name,focus=true){
 }
 function showHome(){showScreen('home');}
 function startQuiz(){current=0;renderQuestion();showScreen('quiz');}
-function updateProgress(){const completed=answers.filter(a=>a!==null).length;$('completion-text').textContent='已完成 '+completed+' / 20';$('progress-fill').style.width=completed/20*100+'%';$('quiz-progress').setAttribute('aria-valuenow',completed);$('next-button').disabled=answers[current]===null;}
+function updateProgress(){const completed=answers.filter(a=>a!==null).length;$('completion-text').textContent='已完成 '+completed+' / 20';$('progress-fill').style.width=completed/20*100+'%';$('quiz-progress').setAttribute('aria-valuenow',completed);$('next-button').disabled=answers[current]===null||pendingRange;}
 function comparisonPhoto(gray=false){return photoUrl?'<img class="drape-photo'+(gray?' grayscale':'')+'" src="'+photoUrl+'" alt="同一張照片的本機比色預覽">':'<div class="empty-face" aria-hidden="true"><span class="face-outline"></span><small>可放入你的照片</small></div>';}
 function renderQuestion(){
+ pendingRange=false;
  const q=QUESTIONS[current],a=answers[current];$('answer-form').classList.toggle('sequential',q.type==='color'&&comparisonSequential);$('question-count').textContent='QUESTION '+String(current+1).padStart(2,'0')+' / 20';$('question-kicker').textContent=q.axis+(q.type==='scenario'?' · 配色比對':'');$('question-title').textContent=q.title;$('question-hint').textContent=q.hint;$('previous-button').textContent=current===0?'← 測驗說明':'← 上一題';$('next-button').innerHTML=(current===19?'查看我的結果':'下一題')+' <span class="arrow" aria-hidden="true">→</span>';
  $('observation-guide').innerHTML='<div><b>現在做</b><p>'+q.do+'</p></div><div><b>看哪裡</b><p>'+q.look+'</p></div>';
  $('quiz-photo-tools').innerHTML=photoControls();
@@ -198,7 +210,8 @@ function renderQuestion(){
  }
  updateProgress();
 }
-function selectAnswer(value){answers[current]=value;result=null;updateProgress();}
+function selectAnswer(value){pendingRange=false;answers[current]=value;result=null;updateProgress();}
+function previewRange(){const n=Number($('range-input').value),q=QUESTIONS[current];pendingRange=true;$('slider-output').textContent='預覽 '+n+' / 5 · '+q.labels[n-1]+'，按確認才會作答';$('confirm-range').textContent='確認 '+n+' / 5 · '+q.labels[n-1];$('range-input').setAttribute('aria-valuetext',q.labels[n-1]);$('slider-box').dataset.answered='false';$('slider-drape').style.background=q.stageColors[n-1];$('slider-shade-label').textContent=q.labels[n-1];updateProgress();}
 function saveRange(){const n=Number($('range-input').value),q=QUESTIONS[current];selectAnswer(n);$('slider-output').textContent=n+' / 5 · '+q.labels[n-1];$('range-input').setAttribute('aria-valuetext',q.labels[n-1]);$('confirm-range').textContent='已選擇 '+n+' / 5 · 點此確認';$('slider-box').dataset.answered='true';if(q.stageColors){$('slider-drape').style.background=q.stageColors[n-1];$('slider-shade-label').textContent=q.labels[n-1];}const unknown=$('answer-form').querySelector('input[value="unknown"]');if(unknown)unknown.checked=false;}
 function photoIsCutout(){return !!photoCutoutUrl&&photoUrl===photoCutoutUrl;}
 function photoIsFace(){return !!photoFaceUrl&&photoUrl===photoFaceUrl;}
@@ -310,7 +323,7 @@ async function removePhotoBackground(){
 
 function restorePhoto(){if(!photoOriginalUrl)return;photoUrl=photoOriginalUrl;updatePhotoUi();notify('已還原原照，答案保持不變。');}
 
-function finishQuiz(){if(answers.some(a=>a===null))return;showScreen('loading',false);calculationTimer=setTimeout(()=>{result=analyze(answers);renderResult();showScreen('result');},650);}
+function finishQuiz(){if(answers.some(a=>a===null))return;showScreen('loading',false);calculationTimer=setTimeout(()=>{result=analyzeForDisplay(answers);renderResult();showScreen('result');},650);}
 function dimensionDescription(r){return [r.dims[0]>.12?'Warm':r.dims[0]<-.12?'Cool':'Neutral',r.dims[1]>.12?'Light':r.dims[1]<-.12?'Deep':'Medium',r.dims[2]>.12?'Bright':r.dims[2]<-.12?'Muted':'Balanced'].map((label,j)=>r.axisCounts[j]?label:['冷暖待觀察','深淺待觀察','彩度待觀察'][j]);}
 function typeAdjustments(r){const s=r.subtype16;return {Light:'你較突出的線索是輕盈的明度，可以先從淺色搭配開始。',Deep:'你較突出的線索是濃郁的深度，可以先從深色基底開始。',Bright:'你較突出的線索是清亮的彩度，可以在臉旁加入乾淨鮮明的重點色。',Soft:'你較突出的線索是柔和的彩度，可以先試帶灰、低對比的色彩。',Warm:'你較突出的線索是暖調，可以先比較帶金、帶黃或大地感的顏色。',Cool:'你較突出的線索是冷調，可以先比較帶藍、帶玫瑰感的顏色。',True:'三個符合這個季節的線索相對平衡，因此 16 型採用 True（正季型）作為探索起點。'}[s];}
 function getPalette(r){
@@ -322,6 +335,53 @@ function axisMarkup(r){const names=['Temperature 冷暖','Value 明度','Chroma 
  return names.map((name,i)=>{const pos=Math.round((r.dims[i]+1)*50),has=r.axisCounts[i]>0;return '<div class="dimension-row"><div class="dimension-title"><b>'+name+'</b><span>'+(has?traits[i]+' · '+pos+'/100':'線索不足')+'</span></div><div class="axis-bar '+classes[i]+'" role="img" aria-label="'+name+'，'+(has?ends[i][0]+'到'+ends[i][1]+'：'+pos+'/100':'尚無線索')+'"><i class="axis-marker" style="left:'+pos+'%"></i></div><div class="axis-labels"><span>'+ends[i][0]+'</span><span>'+ends[i][1]+'</span></div></div>';}).join('');
 }
 function guide(title,english,lines,note=''){return '<details class="guide" open><summary><span>'+title+'<small>'+english+'</small></span></summary><div class="guide-body">'+lines.map(([a,b])=>'<dl class="guide-line"><dt>'+a+'</dt><dd>'+b+'</dd></dl>').join('')+(note?'<p class="guide-note">'+note+'</p>':'')+'</div></details>';}
+// Result checks describe this rule set's behavior, not diagnostic confidence.
+function sensitivityFor(finalAnswers,base){
+ const changed=[],tested=[];
+ QUESTIONS.forEach((q,index)=>{
+  if(q.repeatOf)return;
+  const value=finalAnswers[index],score=optionScore(q,value);
+  if(!score)return;
+  const variants=q.type==='slider'?[value-1,value+1].filter(n=>n>=1&&n<=5):value===0||value===1?[1-value]:[];
+  if(!variants.length)return;
+  tested.push(index);const alternatives=new Set();
+  for(const candidate of variants){const next=[...finalAnswers];next[index]=candidate;const other=analyze(next);if(other.season!==base.season)alternatives.add(other.season);else if(base.topTies.length===1&&other.topTies.length>1)other.topTies.filter(s=>s!==base.season).forEach(s=>alternatives.add(s));}
+  if(alternatives.size)changed.push({index,seasons:[...alternatives]});
+ });
+ return {tested:tested.length,changed};
+}
+function analyzeForDisplay(finalAnswers){
+ const r=analyze(finalAnswers);r.sensitivity=sensitivityFor(finalAnswers,r);r.reviewAnswers=[...finalAnswers];
+ if(r.sensitivity.changed.length){r.reasons.push('改動單一題就可能改變第一季型');r.enough=false;}
+ return r;
+}
+function selectedColors(finalAnswers){
+ const chosen=[],seen=new Set();
+ for(let axis=0;axis<3;axis++){
+  let count=0;
+  QUESTIONS.forEach((q,index)=>{if(q.repeatOf||q.axisIndex!==axis||count>=2)return;const a=finalAnswers[index];let hex;
+   if(q.type==='slider'){if(typeof a!=='number'||a===3)return;hex=q.stageColors[a-1];}else hex=q.options[a]?.hex;
+   if(!hex||seen.has(hex))return;seen.add(hex);count++;chosen.push({hex,index,axis});
+  });
+ }
+ return chosen;
+}
+function answerLabel(q,a){
+ if(a===null)return '尚未回答';
+ if(q.type==='slider')return a==='unknown'?'不確定':a+' / 5 · '+q.labels[a-1];
+ return a===2?'兩邊差不多':a===3?'不確定':'色票 '+String.fromCharCode(65+displayOrders[q.id].indexOf(a));
+}
+function resultChecksMarkup(r){
+ const sensitivity=r.sensitivity,changed=sensitivity?.changed||[];
+ const checkText=sensitivity?(sensitivity.tested===0?'尚無可測試的方向選擇。':changed.length?'有 '+changed.length+' 題改動後可能換季型，建議先回看這些題目。':'這次測試的 '+sensitivity.tested+' 題各自改動後，第一季型都未改變。'):'尚未執行單題檢查。';
+ return '<section class="result-checks" aria-label="結果的觀察依據"><h2>先看線索，再看季型。</h2><div class="evidence-chips"><span>有效觀察 '+r.evidence+' / 17</span><span>複核 '+r.checkedRepeats+' / 3</span><span>相反選擇 '+r.conflicts.length+' 組</span></div><p>'+checkText+'</p><p class="check-detail">單題檢查：色卡改選另一邊，或滑桿移動一格；每次只改一題。這是結果敏感度，不是準確率。</p>'+(changed.length?'<div class="recheck-links">'+changed.map(c=>'<button class="photo-button" data-action="recheck-question" data-index="'+c.index+'">回看第 '+(c.index+1)+' 題</button>').join('')+'</div>':'')+'</section>';
+}
+function answerReviewMarkup(r){
+ if(!r.reviewAnswers)return '';
+ const colors=selectedColors(r.reviewAnswers);
+ return '<details class="method-note observed-colors"><summary>你實際選過的色票'+(colors.length?' · '+colors.length+' 色':'')+'</summary><p>依冷暖、明度、彩度各取最多兩個不重複的已選色；不包含「差不多」、不確定或複核題。這些是你的直接選擇，可與季型的預設色票交叉比較。</p>'+(colors.length?'<div class="observed-grid">'+colors.map(c=>'<button class="observed-swatch" data-action="recheck-question" data-index="'+c.index+'"><i style="background:'+c.hex+'"></i><b>第 '+(c.index+1)+' 題</b><small>'+c.hex+'</small></button>').join('')+'</div>':'<p>這次還沒有選出特定方向的色票；可以先試上方的中性色提案。</p>')+'</details><details class="method-note answer-review"><summary>檢查全部 20 題答案</summary><p>點選任一題即可返回修改，其他答案會保留。</p><div class="answer-review-grid">'+QUESTIONS.map((q,index)=>'<button class="answer-review-item" data-action="recheck-question" data-index="'+index+'"><b>'+String(index+1).padStart(2,'0')+' · '+['冷暖','明度','彩度'][q.axisIndex]+(q.repeatOf?'複核':'')+'</b><span>'+answerLabel(q,r.reviewAnswers[index])+'</span></button>').join('')+'</div></details>';
+}
+
 const NEUTRAL_PALETTE=[['Soft White','#E7E5E1'],['Stone','#B9B5AF'],['Taupe','#938C84'],['Soft Gray','#A5A5A5'],['Charcoal','#555555'],['Cocoa','#7F7065']];
 function resultPresentation(r){
  const neutral=!r.hasDirection,s=SEASONS[r.season],title=neutral?'Neutral Edit':r.type16;
@@ -337,7 +397,7 @@ function renderResult(){
  const code=p.neutral?'<p class="neutral-result-note">先從這份實用色票開始，不必急著認定季型。</p>':'<dl class="result-code"><div><dt>4 SEASON</dt><dd>'+r.season+'</dd></div><div><dt>12 TYPE</dt><dd>'+r.type12+'</dd></div><div><dt>16 TYPE</dt><dd>'+r.type16+'</dd></div></dl>';
  const guides=p.neutral?guide('日常穿搭','Wardrobe',[['Try First','柔白、石色、灰褐、炭灰；每次選一個靠近臉部比較。'],['搭配方式','先用兩種中性色組合，再加入你喜歡的小面積彩色。']], '這份提案不限制你使用任何顏色。')+guide('彩妝、髮色與飾品','Explore',[['彩妝','可以先保留日常習慣，或不化妝；逐一試色。'],['髮色','先拿實際髮束在相同光線下比較。'],['飾品','金色、銀色都可試戴；不從平手結果指定一種。']], '缺少方向時，以實物比較作為下一步。'):
  guide('日常穿搭','Wardrobe',[['Best Colors',p.palette.slice(0,4).map(c=>c[0]).join(' · ')],['Best Neutrals',s.neutrals],['Use Carefully',s.care]],s.style)+guide('彩妝靈感','Makeup',[['Lip / 唇彩',s.lip],['Blush / 腮紅',s.blush],['Eyeshadow / 眼影',s.eyes]],'不化妝也完全沒關係，其他色彩建議一樣適用。')+guide('髮色提案','Hair',[['Recommended',s.hair],['Use Carefully',s.hairCare]],'可先用髮束比對，再依個人喜好調整。')+guide('金屬與飾品','Jewelry',[['Your Metals',s.metals],['Try It','用實際飾品在相同光線下試戴，也可與你習慣的顏色交叉比較。']],'這些是嘗試的起點，喜歡的顏色依然可以穿戴。');
- $('results-content').innerHTML='<div class="result-title-row"><p class="eyebrow">Your color starting point</p><p>每次探索，都有一份可以開始嘗試的色彩提案。</p></div><div class="result-hero" style="--result-bg:'+p.bg+'"><div class="result-identity"><p class="result-season-tag">'+(p.neutral?'A neutral starting point':r.season+' palette')+'</p><h1 id="result-title" tabindex="-1">'+p.title+'</h1><p class="result-cn">'+p.zh+'</p><p class="result-status">'+p.status+'</p><div class="trait-pills">'+traits.map(t=>'<span>'+t+'</span>').join('')+'</div>'+code+'</div><div class="result-dimensions"><h2 class="small-title">YOUR THREE COLOR DIMENSIONS</h2>'+axisMarkup(r)+'</div></div><div class="result-explanation"><div><h2>Your starting point, explained.</h2><p>'+p.explanation+'</p><p class="evidence-note">目前有 '+r.evidence+' / 17 題提供可分析的觀察；另有 3 題換序複核。</p>'+evidenceMarkup(r)+'</div><div><h2 class="small-title" style="font-family:var(--sans);font-size:10px;margin-bottom:16px">SEASON COMPARISON / 季型相對分數</h2>'+r.ranked.map(row=>'<div class="score-row"><span>'+row.name+'</span><div class="score-track"><div class="score-fill" style="width:'+row.percent+'%"></div></div><b>'+row.percent+'%</b></div>').join('')+'<p class="score-footnote">百分比是本測驗規則產生的相對分數，不是診斷機率。冷暖明確時優先在相應季型中比較；12／16 型為本站的探索對應。</p></div></div><section class="palette-section"><div class="palette-heading"><h2>Your everyday palette.</h2><p>'+(p.neutral?'沒有明確方向時，先試這 6 個中性色':'依 '+r.type16+' 提供的 6 個色彩起點')+'</p></div><div class="result-swatches">'+p.palette.map(([name,color])=>'<div class="result-swatch"><div class="swatch-color" style="background:'+color+'" role="img" aria-label="'+name+' '+color+'"></div><b>'+name+'</b><span>'+color+'</span></div>').join('')+'</div></section><div class="guides">'+guides+'</div><div class="result-actions"><button class="primary" id="download-button">下載我的色彩圖卡 <span class="arrow" aria-hidden="true">↓</span></button><button class="secondary" id="retake-button">重新測驗 <span aria-hidden="true">↻</span></button></div><div id="download-preview" hidden class="download-preview"></div><p class="result-disclaimer">本次結果是嘗試的起點，不能單靠它推翻你的實際穿搭感受。<br>僅供趣味與自我探索，非專業診斷；照片、光線與螢幕皆可能影響觀察。</p><a class="text-button" href="#research-method" data-action="method">查看依據與測驗限制</a><button class="text-button review-button" data-action="review">回去檢查或修改答案</button>';
+ $('results-content').innerHTML='<div class="result-title-row"><p class="eyebrow">Your color starting point</p><p>每次探索，都有一份可以開始嘗試的色彩提案。</p></div><div class="result-hero" style="--result-bg:'+p.bg+'"><div class="result-identity"><p class="result-season-tag">'+(p.neutral?'A neutral starting point':r.season+' palette')+'</p><h1 id="result-title" tabindex="-1">'+p.title+'</h1><p class="result-cn">'+p.zh+'</p><p class="result-status">'+p.status+'</p><div class="trait-pills">'+traits.map(t=>'<span>'+t+'</span>').join('')+'</div>'+code+'</div><div class="result-dimensions"><h2 class="small-title">YOUR THREE COLOR DIMENSIONS</h2>'+axisMarkup(r)+'</div></div>'+resultChecksMarkup(r)+'<div class="result-explanation"><div><h2>Your starting point, explained.</h2><p>'+p.explanation+'</p><p class="evidence-note">目前有 '+r.evidence+' / 17 題提供可分析的觀察；另有 3 題換序複核。</p>'+evidenceMarkup(r)+'</div><div><h2 class="small-title" style="font-family:var(--sans);font-size:10px;margin-bottom:16px">SEASON COMPARISON / 季型相對分數</h2>'+r.ranked.map(row=>'<div class="score-row"><span>'+row.name+'</span><div class="score-track"><div class="score-fill" style="width:'+row.percent+'%"></div></div><b>'+row.percent+'%</b></div>').join('')+'<p class="score-footnote">百分比是本測驗規則產生的相對分數，不是診斷機率。冷暖明確時優先在相應季型中比較；12／16 型為本站的探索對應。</p></div></div><section class="palette-section"><div class="palette-heading"><h2>Your everyday palette.</h2><p>'+(p.neutral?'沒有明確方向時，先試這 6 個中性色':'依 '+r.type16+' 提供的 6 個色彩起點')+'</p></div><div class="result-swatches">'+p.palette.map(([name,color])=>'<div class="result-swatch"><div class="swatch-color" style="background:'+color+'" role="img" aria-label="'+name+' '+color+'"></div><b>'+name+'</b><span>'+color+'</span></div>').join('')+'</div></section>'+answerReviewMarkup(r)+'<div class="guides">'+guides+'</div><div class="result-actions"><button class="primary" id="download-button">下載我的色彩圖卡 <span class="arrow" aria-hidden="true">↓</span></button><button class="secondary" id="retake-button">重新測驗 <span aria-hidden="true">↻</span></button></div><div id="download-preview" hidden class="download-preview"></div><p class="result-disclaimer">本次結果是嘗試的起點，不能單靠它推翻你的實際穿搭感受。<br>僅供趣味與自我探索，非專業診斷；照片、光線與螢幕皆可能影響觀察。</p><a class="text-button" href="#research-method" data-action="method">查看依據與測驗限制</a><button class="text-button review-button" data-action="review">回去檢查或修改答案</button>';
 }
 
 function 在家說明(){return '靠近窗邊，關閉黃光與螢幕濾鏡，先觀察素顏或淡妝的氣色。';}
@@ -362,8 +422,8 @@ function resultCanvas(r){
  r.ranked.forEach((row,i)=>{const y=1055+i*57;txt(row.name,85,y+8,23);roundedRect(ctx,260,y-10,735,12,6,'#e1e4d8');if(row.percent)roundedRect(ctx,260,y-10,735*row.percent/100,12,6,i?'#a5b093':'#6c7759');txt(row.percent+'%',1030,y+8,21);});
  txt('BEST COLORS / '+(p.neutral?'中性色探索提案':'穿搭色彩起點'),85,1332,19,'#6c7759');
  txt(pal.slice(0,4).map(c=>c[0]).join('  ·  '),85,1384,24);
- txt((r.enough?'':'暫定探索結果；')+'相對分數並非診斷機率。',85,1458,17,'#72766b');
- txt('換序複核 '+r.checkedRepeats+'/3 組；相反選擇 '+r.conflicts.length+' 組。非專業診斷。',85,1491,17,'#72766b');
+ txt((r.enough?'':'暫定探索；')+'觀察 '+r.evidence+'/17，複核 '+r.checkedRepeats+'/3；相對分數並非診斷機率。',85,1458,17,'#72766b');
+ txt('單題變動：'+(r.sensitivity?.changed.length||0)+' 題可能改變季型；相反複核 '+r.conflicts.length+' 組。非專業診斷。',85,1491,17,'#72766b');
  txt('YOUR COLORS. YOUR KIND OF BEAUTIFUL.',85,1545,17,'#6c7759');
  return canvas;
 }
@@ -380,9 +440,9 @@ document.addEventListener('click',event=>{const action=event.target.closest('[da
 $('photo-file').addEventListener('change',event=>loadPhoto(event.target.files[0]));
 $('answer-form').addEventListener('submit',event=>event.preventDefault());
 $('answer-form').addEventListener('change',event=>{if(event.target.name==='answer'){selectAnswer(event.target.value==='unknown'?'unknown':Number(event.target.value));if(QUESTIONS[current].type==='slider'&&event.target.value==='unknown'){$('slider-box').dataset.answered='false';$('slider-output').textContent='已選擇不確定；拖動滑桿可重新作答。';}}});
-$('answer-form').addEventListener('input',event=>{if(event.target.id==='range-input')saveRange();});
+$('answer-form').addEventListener('input',event=>{if(event.target.id==='range-input')previewRange();});
 $('previous-button').addEventListener('click',()=>{if(current===0){showScreen('intro');return;}current--;renderQuestion();window.scrollTo({top:0,behavior:'instant'});focusTitle('question-title');});
-$('next-button').addEventListener('click',()=>{if(answers[current]===null)return;if(current===19){finishQuiz();return;}current++;renderQuestion();window.scrollTo({top:0,behavior:'instant'});focusTitle('question-title');});
+$('next-button').addEventListener('click',()=>{if(answers[current]===null||pendingRange)return;if(current===19){finishQuiz();return;}current++;renderQuestion();window.scrollTo({top:0,behavior:'instant'});focusTitle('question-title');});
 window.addEventListener('pagehide',()=>{if(downloadUrl)URL.revokeObjectURL(downloadUrl);});
 </script>
 </body>
